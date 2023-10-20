@@ -36,15 +36,13 @@ header {
 
 .navbar {
     background-color: #ff8661;
+    height: 55px;
 }
 .navbar-brand {
     padding: 15px;
 }
 
 .navbar-nav a {
-    color: var(--text-color);
-}
-.navbar-nav button {
     color: var(--text-color);
 }
 
@@ -109,6 +107,8 @@ i {
     display: block;
 }
 
+/* Chaind container styles */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ i {
     height: 80px;
 }
 .row {
-    background-color: #ff8661;
+    background-color: #ff5722;
     border-radius: 20px;
     margin-bottom: 20px;
 }
@@ -240,7 +240,7 @@ i {
 
 .card-content img.round-image {
     width: 70px;
-    height: 70px;
+    height: 70x;
     border-radius: 50%;
     border: 2px solid #eeeeee;
     margin-bottom: 2px;
@@ -265,7 +265,7 @@ i {
     background-color: #28c76f;
     position: absolute;
     top: 5px;
-    right: 20px;
+    right: 25px;
     animation: blinking-active 1s infinite;
 }
 
@@ -277,7 +277,7 @@ i {
     background-color: red;
     position: absolute;
     top: 5px;
-    right: 20px;
+    right: 25px;
     animation: blinking-inactive 1s infinite;
 }
 
@@ -292,8 +292,8 @@ i {
 }
 
 /*==================== 
-  Footer 
-====================== */
+    Footer 
+  ====================== */
 footer .container {
     padding-left: 0px;
 }
@@ -382,8 +382,8 @@ footer.light .footer-copyright {
 }
 
 /*==================== 
-  Widgets 
-====================== */
+    Widgets 
+  ====================== */
 .widget {
     padding: 10px;
     margin-bottom: 20px;

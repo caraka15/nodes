@@ -19,7 +19,8 @@ class ChaindController extends Controller
     public function show(Chaind $chaind)
     {
         return view('chaind', [
-            "chaind" => $chaind
+            "chaind" => $chaind,
+            "active" => "home"
         ]);
     }
 }

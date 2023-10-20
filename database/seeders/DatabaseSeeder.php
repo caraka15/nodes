@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\User;
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Chaind;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 
@@ -25,6 +26,26 @@ class DatabaseSeeder extends Seeder
             'username' => 'caraka15',
             'password' => bcrypt('caraka'),
             'is_admin' => true
+        ]);
+
+        Chaind::create([
+            'type' => 'Mainnet',
+            'name' => 'Planq',
+            'slug' => 'planq',
+            'logo' => 'planq.jpg',
+            'guide_link' => 'planq.md',
+            'rpc_link' => 'https://rpc.planq.crxa.my.id',
+            'stake_link' => 'https://explorer.tcnetwork.io/planq/validator/plqvaloper16cfuq9d8nv2yrfzl409xkk6w0s4mq9asad5c47',
+        ]);
+
+        Chaind::create([
+            'type' => 'Testnet',
+            'name' => 'Mande',
+            'slug' => 'mande',
+            'logo' => 'mande.png',
+            'guide_link' => 'mande.md',
+            'rpc_link' => 'https://rpc.mande.crxa.my.id',
+            'stake_link' => 'https://explorer.tcnetwork.io/planq/validator/plqvaloper16cfuq9d8nv2yrfzl409xkk6w0s4mq9asad5c47',
         ]);
 
 
