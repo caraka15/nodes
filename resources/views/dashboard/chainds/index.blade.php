@@ -28,7 +28,7 @@
         @foreach ($chainds as $chaind)
             <tr class="align-middle">
                 <td>{{ $loop->iteration }}</td>
-                <td><img src="{{ asset('img/' . $chaind->logo) }}" style="width: 40px;
+                <td><img src="{{ asset('storage/' . $chaind->logo) }}" style="width: 40px;
                   height: 30x;
                   border-radius: 50%;
                   border: 2px solid #eeeeee;" alt="{{ $chaind->name }}"></td>

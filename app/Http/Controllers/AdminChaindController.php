@@ -67,8 +67,8 @@ class AdminChaindController extends Controller
      */
     public function show(Chaind $chaind)
     {
-        return view('dashboard.posts.show', [
-            'post' => $post
+        return view('dashboard.chainds.sh', [
+            'chaind' => $chaind
         ]);
     }
 
@@ -77,7 +77,9 @@ class AdminChaindController extends Controller
      */
     public function edit(Chaind $chaind)
     {
-        //
+        return view('dashboard.chainds.edit', [
+            'chaind' => $chaind
+        ]);
     }
 
     /**
@@ -85,7 +87,40 @@ class AdminChaindController extends Controller
      */
     public function update(Request $request, Chaind $chaind)
     {
-        //
+        $rules = [
+            'logo' => 'required|image|file|max:1024',
+            'type' => 'required',
+            'name' => 'required|max:20',
+            'guide_link' => 'required|file',
+            'rpc_link' => 'required',
+            'stake_link' => 'required'
+        ];
+
+        if ($request->slug != $chaind->slug) {
+            $rules['slug']  = 'required|unique:posts';
+        }
+
+        $validateData = $request->validate($rules);
+
+        if ($request->file('logo')) {
+            if ($request->oldLogo) {
+                Storage::delete($request->oldLogo);
+            }
+            $validateData['logo'] = $request->file('logo')->store('logo-chaind');
+        }
+
+        if ($request->file('guide_link')) {
+            if ($request->oldGuide) {
+                Storage::delete($request->oldImage);
+            }
+            $validateData['guide_link'] = $request->file('guide_link')->store('guide-chaind');
+        }
+
+
+        Chaind::where('id', $chaind->id)
+            ->update($validateData);
+
+        return redirect('/dashboard/chainds')->with('success', 'post has been Updated');
     }
 
     /**
@@ -100,7 +135,7 @@ class AdminChaindController extends Controller
         if ($chaind->Guide_link) {
             Storage::delete($chaind->guide_link);
         }
-        Post::destroy($chaind->id);
+        Chaind::destroy($chaind->id);
 
         return redirect('/dashboard/chainds')->with('success', 'Post has been deleted!');
     }

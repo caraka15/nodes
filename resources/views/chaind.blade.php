@@ -159,7 +159,7 @@
 </head>
 <body>
     <div class="info">
-            <img src="{{ "img/{$chaind->logo}" }}" alt="Logo" width="40" height="40">
+            <img src="{{ asset('storage/' . $chaind->logo) }}" alt="Logo" width="40" height="40">
             <div class="title">Installation</div>
             <div class="name">{{ $chaind->name }}</div>
     </div>
@@ -269,7 +269,7 @@
     </script>
     <script>
     // Ubah urlFile menjadi URL file Markdown yang ingin Anda tampilkan
-    const urlFile = "{{ $chaind ? asset('guide/' . $chaind->guide_link) : '' }}";
+    const urlFile = "{{ $chaind ? asset('storage/' . $chaind->guide_link) : '' }}";
 
     if (urlFile) {
         // Ambil konten file Markdown menggunakan XMLHttpRequest

@@ -14,8 +14,7 @@
                 <button class="btn btn-danger " onclick="return confirm('are you sure?')"><span data-feather="x-circle"></span>Delete</button>
             </form>
 
-            <img src="{{ storage($chaind->logo) }}}}" alt="{{ $chaind->name }}" class="img-fluid mt-3">
-            @endif
+            <img src="{{ asset('storage/' . $chaind->logo) }}" alt="{{ $chaind->name }}" class="img-fluid mt-3">
         </div>
     </div>
 </div>

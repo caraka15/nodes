@@ -50,7 +50,6 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 Route::get('/dashboard/chainds/checkSlug', [AdminChaindController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/chainds', AdminChaindController::class)->middleware('admin');

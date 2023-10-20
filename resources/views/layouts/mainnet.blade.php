@@ -16,7 +16,7 @@
             
                     <div class="card">
                         <div class="card-content">
-                            <img src="img/{{ $chaind->logo }}" alt="{{ $chaind->name }}" class="round-image">
+                            <img src="{{ asset('storage/' . $chaind->logo) }}" alt="{{ $chaind->name }}" class="round-image">
                             <h2>{{ $chaind->name }}</h2>
                             <a href="{{ $chaind->stake_link }}" class="btn btn-primary" target="_blank">STAKE</a>
                             <a href="/{{ $chaind->slug }}" class="btn btn-primary" target="_blank">SERVICE</a>

@@ -28,6 +28,14 @@
           </a>
         </li>
       </ul>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/chainds*') ? 'active' : '' }}" href="/dashboard/chainds">
+            <span data-feather="grid"></span>
+            Chaind List
+          </a>
+        </li>
+      </ul>
       @endcan
 
     </div>
