@@ -12,11 +12,11 @@
           <a class="nav-link {{ ($active === "posts") ? 'active' : '' }}" href="/posts"><i class="ri-newspaper-line"></i></i>Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($active === "category") ? 'active' : '' }}" href="/category"><i class="ri-price-tag-3-line"></i>Category</a>
+          <a class="nav-link {{ ($active === "category") ? 'active' : '' }}" href="/categories"><i class="ri-price-tag-3-line"></i>Category</a>
         </li>
       </ul>
 
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto m3-1">
         @auth
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
