@@ -48,7 +48,7 @@
         <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
       </form>
 
-      <small class="d-block text-center">Already registered? <a href="/register">Login Now</a></small>
+      <small class="d-block text-center">Already registered? <a href="/login">Login Now</a></small>
     </main>
   </div>
 </div>
