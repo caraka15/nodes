@@ -36,7 +36,15 @@ header {
 
 .navbar {
     background-color: #ff8661;
-    height: 55px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+.navbar-collapse.show {
+    display: block;
+    background-color: #ff8661;
+    z-index: 1000;
 }
 .navbar-brand {
     padding: 15px;
