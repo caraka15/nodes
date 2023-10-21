@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Crxa Nodes Service</title>
-    <link rel="icon" type="image/x-icon" href="component/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}">
     <meta name="description" content="CRXA NODES is a premier individual enterprise dedicated to providing exceptional node and
                             validator services across various networks, with a primary focus on the thriving Cosmos
                             ecosystem. With an unwavering commitment to excellence, we have established ourselves as a

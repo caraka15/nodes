@@ -41,13 +41,29 @@ header {
     padding: 0;
     align-items: center;
 }
+
+.navbar-brand {
+    font-size: 20px;
+}
+.navbar-toggler {
+    margin-right: 15px;
+}
 .navbar-collapse.show {
     display: block;
     background-color: #ff8661;
     z-index: 1000;
+    padding: 12px;
 }
 .navbar-brand {
-    padding: 15px;
+    padding-left: 15px;
+}
+.navbar-brand img {
+    border: white;
+    width: 45px;
+    border: 1px solid #000;
+    border-spacing: 0px;
+    border-radius: 50%;
+    background-color: #000;
 }
 
 .navbar-nav a {
@@ -129,9 +145,10 @@ i {
     height: 80px;
 }
 .row {
-    background-color: #ff5722;
+    background-color: #ff8661;
     border-radius: 20px;
     margin-bottom: 20px;
+    margin: 10px;
 }
 .type-header {
     padding-top: 20px;
@@ -302,8 +319,9 @@ i {
 /*==================== 
     Footer 
   ====================== */
+
 footer .container {
-    padding-left: 0px;
+    padding-left: 12px;
 }
 footer .row {
     background-color: #252525;

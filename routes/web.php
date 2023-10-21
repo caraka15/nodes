@@ -10,9 +10,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ChaindController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminChaindController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
-use App\Http\Controllers\AdminChaindController;
 
 
 
@@ -53,3 +54,4 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 Route::get('/dashboard/chainds/checkSlug', [AdminChaindController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/chainds', AdminChaindController::class)->middleware('admin');
+Route::resource('/dashboard/user', DashboardController::class)->middleware('auth');
