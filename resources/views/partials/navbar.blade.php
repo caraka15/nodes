@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><i class="fa-regular fa-house fa-lg"></i>Home</a>
+          <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><i class="fa-regular fa-house"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts"><i class="fa-regular fa-newspaper fa-lg"></i>Blogs</a>
+          <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts"><i class="fa-regular fa-newspaper"></i>Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('categories') ? 'active' : '' }}" href="/categories"><i class="fa-regular fa-list fa-lg"></i>Category</a>
+          <a class="nav-link {{ Request::is('categories') ? 'active' : '' }}" href="/categories"><i class="fa-regular fa-list"></i>Category</a>
         </li>
       </ul>
 
