@@ -29,12 +29,12 @@
                 <td>{{ $post->title }}</td>
                 <td>{{ $post->category->name }}</td>
                 <td>
-                    <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info link-light text-decoration-none"><i class="ri-eye-line"></i></a>
-                    <a href="/dashboard/posts/{{ $post->slug }}/edit" class="badge bg-warning link-light text-decoration-none"><i class="ri-edit-line"></i></a>
+                    <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info link-light text-decoration-none"><i class="fa-duotone fa-eye fa-lg"></i></a>
+                    <a href="/dashboard/posts/{{ $post->slug }}/edit" class="badge bg-warning link-light text-decoration-none"><i class="fa-duotone fa-pen-to-square fa-lg"></i></i></a>
                     <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
                       @method('delete')
                       @csrf
-                      <button class="badge bg-danger border-0" onclick="return confirm('are you sure?')"><i class="ri-close-line"></i></button>
+                      <button class="badge bg-danger border-0" onclick="return confirm('are you sure?')"><i class="fa-duotone fa-circle-x fa-lg"></i></button>
                     </form>
                 </td>
             </tr>

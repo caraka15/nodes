@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><i class="ri-home-4-fill"></i></i>Home</a>
+          <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/"><i class="fa-regular fa-house fa-lg"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts"><i class="ri-newspaper-line"></i></i>Blogs</a>
+          <a class="nav-link {{ Request::is('posts*') ? 'active' : '' }}" href="/posts"><i class="fa-regular fa-newspaper fa-lg"></i>Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('categories') ? 'active' : '' }}" href="/categories"><i class="ri-price-tag-3-line"></i>Category</a>
+          <a class="nav-link {{ Request::is('categories') ? 'active' : '' }}" href="/categories"><i class="fa-regular fa-list fa-lg"></i>Category</a>
         </li>
       </ul>
 
@@ -24,18 +24,18 @@
                 Welcome Back, {{ auth()->user()->name }}
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/dashboard/user"><i class="ri-layout-5-line"></i>My Dashboard</a></li>
+                <li><a class="dropdown-item" href="/dashboard/user"><i class="fa-regular fa-table-list fa-lg"></i>My Dashboard</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <form action="/logout" method="post">
                     @csrf
-                    <button type="submit" class="dropdown-item"><i class="ri-logout-box-r-line"></i>Logout</button>
+                    <button type="submit" class="dropdown-item btn-dark"><i class="fa-regular fa-arrow-right-from-bracket fa-lg"></i>Logout</button>
                   </form>
               </ul>
           </li>
         @else
           <li class="nav-item">
-            <a class="nav-link {{ ($active === "login") ? 'active' : '' }}" href="/login"><i class="ri-login-box-line"></i>Login</a>
+            <a class="nav-link {{ ($active === "login") ? 'active' : '' }}" href="/login"><i class="fa-regular fa-right-to-bracket fa-lg"></i>Login</a>
           </li>
         @endauth
       </ul>

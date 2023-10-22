@@ -35,12 +35,12 @@
                 <td>{{ $chaind->name }}</td>
                 <td>{{ $chaind->type }}</td>
                 <td>
-                    <a href="/dashboard/chainds/{{ $chaind->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-                    <a href="/dashboard/chainds/{{ $chaind->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                    <a href="/dashboard/chainds/{{ $chaind->slug }}" class="badge bg-info link-light text-decoration-none"><i class="fa-duotone fa-eye fa-lg"></i></a>
+                    <a href="/dashboard/chainds/{{ $chaind->slug }}/edit" class="badge bg-warning link-light text-decoration-none s-4"><i class="fa-duotone fa-pen-to-square fa-lg"></i></span></a>
                     <form action="/dashboard/chainds/{{ $chaind->slug }}" method="post" class="d-inline">
                       @method('delete')
                       @csrf
-                      <button class="badge bg-danger border-0" onclick="return confirm('are you sure?')"><span data-feather="x-circle"></button>
+                      <button class="badge bg-danger border-0" onclick="return confirm('are you sure?')"><i class="fa-duotone fa-circle-x fa-lg"></i></button>
                     </form>
                 </td>
             </tr>

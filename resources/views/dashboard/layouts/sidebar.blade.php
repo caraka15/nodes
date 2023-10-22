@@ -4,10 +4,10 @@
   </div>
   <div class="list-group list-group-flush">
     <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::is('dashboard/user*') ? 'active' : '' }}"
-      href="/dashboard/user"><i class="ri-home-4-line"></i>Dashboard
+      href="/dashboard/user"><i class="fa-regular fa-house fa-lg"></i> Dashboard
     </a>
     <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::is('dashboard/posts*') ? 'active' : '' }}"
-      href="/dashboard/posts"><i class="ri-file-text-line"></i>My Posts
+      href="/dashboard/posts"><i class="fa-light fa-newspaper fa-lg"></i> My Posts
     </a>
 
     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -16,10 +16,10 @@
 
     @can('admin')
     <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::is('dashboard/categories*') ? 'active' : '' }}"
-      href="/dashboard/categories"><i class="ri-layout-grid-fill"></i>Post Categories
+      href="/dashboard/categories"><i class="fa-solid fa-grid-round-2-plus fa-lg"></i> Post Categories
     </a>
     <a class="list-group-item list-group-item-action list-group-item-light p-3 {{ Request::is('dashboard/chainds*') ? 'active' : '' }}"
-      href="/dashboard/chainds"><i class="ri-list-check"></i>Chaind Lists
+      href="/dashboard/chainds"><i class="fa-regular fa-list fa-lg"></i> Chaind Lists
     </a>
     @endcan
     

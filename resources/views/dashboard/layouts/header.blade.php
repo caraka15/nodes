@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
   <div class="container-fluid">
     <button class="btn btn-secondary" id="sidebarToggle">
-      <i class="ri-side-bar-fill"></i>
+      <i class="fa-duotone fa-sidebar fa-lg"></i>
     </button>
     <button
       class="navbar-toggler"
@@ -17,22 +17,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="/"><i class="ri-home-4-line"></i>Home</a>
+          <a class="nav-link" href="/"><i class="ri-home-4-line"><i class="fa-duotone fa-house fa-lg"></i> Home</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item ms-3 dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="ri-dropdown-list"></i>
+            <i class="fa-duotone fa-bars fa-lg"></i>
           </a>
           <div
             class="dropdown-menu dropdown-menu-end"
             aria-labelledby="navbarDropdown"
           >
-            <a class="dropdown-item" href="/dashboard/user/{{ auth()->user()->username }}/edit"><i class="ri-user-line"></i>Edit Profile</a>
-            <a class="dropdown-item" href="/dashboard/password/{{ auth()->user()->username }}/edit"><i class="ri-lock-line"></i>Change Password</a>
+            <a class="dropdown-item" href="/dashboard/user/{{ auth()->user()->username }}/edit"><i class="fa-duotone fa-pen-to-square fa-lg"></i> Edit Profile</a>
+            <a class="dropdown-item" href="/dashboard/password/{{ auth()->user()->username }}/edit"><i class="fa-duotone fa-lock fa-lg"></i> Change Password</a>
             <div class="dropdown-divider"></div>
             <form action="/logout" method="post">
               @csrf
-              <button type="submit" class="dropdown-item"><i class="ri-logout-box-r-line"></i>Logout</span></button>
+              <button type="submit" class="dropdown-item"><i class="fa-duotone fa-arrow-right-from-bracket fa-lg"></i> Logout</span></button>
             </form>
           </div>
         </li>
