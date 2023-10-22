@@ -1,53 +1,26 @@
-/* globals Chart:false, feather:false */
+/*!
+* Start Bootstrap - Simple Sidebar v6.0.6 (https://startbootstrap.com/template/simple-sidebar)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+*/
+// 
+// Scripts
+// 
 
-(function () {
-  'use strict'
+window.addEventListener('DOMContentLoaded', event => {
 
-  feather.replace({ 'aria-hidden': 'true' })
-
-  // Graphs
-  var ctx = document.getElementById('myChart')
-  // eslint-disable-next-line no-unused-vars
-  var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
-      ],
-      datasets: [{
-        data: [
-          15339,
-          21345,
-          18483,
-          24003,
-          23489,
-          24092,
-          12034
-        ],
-        lineTension: 0,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        borderWidth: 4,
-        pointBackgroundColor: '#007bff'
-      }]
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: false
-          }
-        }]
-      },
-      legend: {
-        display: false
-      }
+    // Toggle the side navigation
+    const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    if (sidebarToggle) {
+        // Uncomment Below to persist sidebar toggle between refreshes
+        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+        //     document.body.classList.toggle('sb-sidenav-toggled');
+        // }
+        sidebarToggle.addEventListener('click', event => {
+            event.preventDefault();
+            document.body.classList.toggle('sb-sidenav-toggled');
+            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+        });
     }
-  })
-})()
+
+});

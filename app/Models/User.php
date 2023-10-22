@@ -43,4 +43,14 @@ class User extends Authenticatable
     {
         return 'username';
     }
+
+    public function countUserPosts()
+    {
+        return $this->posts()->count();
+    }
+    
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

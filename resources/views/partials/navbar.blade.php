@@ -24,7 +24,7 @@
                 Welcome Back, {{ auth()->user()->name }}
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/dashboard"><i class="ri-layout-5-line"></i>My Dashboard</a></li>
+                <li><a class="dropdown-item" href="/dashboard/user"><i class="ri-layout-5-line"></i>My Dashboard</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li>
                   <form action="/logout" method="post">

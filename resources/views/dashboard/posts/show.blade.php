@@ -6,12 +6,12 @@
         <div class="col-md-8">
             <h1 class="mb-3 mt-5">{{ $post->title }}</h1>
 
-            <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span>Back to all my posts</a>
-            <a href="" class="btn btn-warning"><span data-feather="edit"></span>Edit Post</a>
+            <a href="/dashboard/posts" class="btn btn-success"><i class="ri-arrow-left-circle-line"></i>Back to all my posts</a>
+            <a href="" class="btn btn-warning"><i class="ri-edit-line"></i> Post</a>
             <form action="/dashboard/posts/{{ $post->slug }}" method="post" class="d-inline">
                 @method('delete')
                 @csrf
-                <button class="btn btn-danger " onclick="return confirm('are you sure?')"><span data-feather="x-circle"></span>Delete</button>
+                <button class="btn btn-danger " onclick="return confirm('are you sure?')"><i class="ri-close-line"></i>Delete</button>
             </form>
 
             @if ($post->image)
