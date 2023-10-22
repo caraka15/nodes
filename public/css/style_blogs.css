@@ -34,23 +34,6 @@ header {
     transition: all 0.5s ease;
 }
 
-#btn-back-to-top {
-    background-color: transparent;
-    position: fixed;
-    padding: 0;
-    margin: 0;
-    height: 70px;
-    width: 70px;
-    bottom: 20px;
-    right: 10px;
-    display: none;
-    z-index: 10002;
-    color: #ff8661;
-    border-color: transparent;
-}
-#btn-back-to-top:hover {
-    background-color: transparent;
-}
 .navbar {
     background-color: #ff8661;
     height: 60px;
