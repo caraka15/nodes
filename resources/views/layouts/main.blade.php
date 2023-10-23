@@ -33,21 +33,34 @@
       rel="stylesheet"
       href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css"
     >
-    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPBYJDLTQE"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-QPBYJDLTQE');
-    </script>
+    <style>
+      .loader {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding-top: 19%;
+        background: #ff8661;
+        padding-left: 48%;
+        margin: 0 auto;
+        z-index: 999999;
+      }
+      .loader svg{
+        width: 100px;
+      }
+      @media (max-width: 768px) {
+        .loader {
+          padding: 50% 36%;
+        }
+      }
+    </style>
 </head>
 <body>
+  <div class="loader">
+    @yield('loader')
+  </div>
   @include('partials.navbar')
 
   <div class="container">
@@ -56,7 +69,13 @@
 
   @include('partials.footer')
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+  $(function(){
+    setTimeout(() => {
+      $(".loader").fadeOut(800);
+    },800)
+  })
+</script>
 </body>
 </html>
